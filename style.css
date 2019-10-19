@@ -1,10 +1,17 @@
 /* header */
+.container{
+    
+}
+
+
+
 .navbar{
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     font-weight: 400;
     color: white;
     text-align: center;
+
 
 }
 .head-text{
