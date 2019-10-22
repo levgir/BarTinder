@@ -1,4 +1,43 @@
+/* landing Page */
+html,body {
+    font-family: 'Open Sans', serif;
+}
+.hero.is-info {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url('https://unsplash.com/collections/8799482/bartinder') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}.hero .nav, .hero.is-success .nav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.hero .subtitle {
+    padding: 3rem 0;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
 /* header */
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.html,body {
+    
+}
+
 .navbar{
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
@@ -20,6 +59,13 @@
     font-style: italic;
 }
 
+
+
+
+
+
+
+
 .footer{
     padding-top: 15px;
     padding-bottom: 0%;
@@ -33,10 +79,7 @@
 }
 
 .foot-text{
-    
+
     color: white;
 }
-
-
-
 
