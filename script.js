@@ -19,8 +19,16 @@ $(document).ready(function () {
                
                 if (response.drinks[0][("strIngredient" + i)] !== null) {
                     var ingredient = response.drinks[0][("strIngredient" + i)];
-                    var measure = response.drinks[0]["strMeasure" + i];
-                    //console.log(ingredient);
+
+               
+                    if(response.drinks[0]["strMeasure" + i] !== null) {
+                        var measure = response.drinks[0]["strMeasure" + i];
+                    }else{
+                        var measure = "";
+                    }
+                    
+                    console.log(ingredient);
+
 
                     $('#ing-list').append('<li class="ingredient">' + measure + " " + ingredient + '</li>');
 
