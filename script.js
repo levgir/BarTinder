@@ -1,4 +1,4 @@
-
+var userDrink = '';
 
 $(document).ready(function () {
 
@@ -50,6 +50,12 @@ $(document).ready(function () {
             }
             //end verify function
         });
+
+        $("#drinkChoice").click(function() {
+            userDrink = $("#drink-name").text();
+            localStorage.setItem("userDrink",JSON.stringify(userDrink));
+            window.location.href="videoPage.html"
+        })
 
     //end document ready function
 });
