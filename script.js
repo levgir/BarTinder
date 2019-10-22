@@ -1,4 +1,4 @@
-var universalDrink = "";
+var userDrink = '';
 
 $(document).ready(function () {
 
@@ -12,7 +12,6 @@ $(document).ready(function () {
 
         $("#img").attr("src", response.drinks[0].strDrinkThumb);
         $("#drink-name").text(response.drinks[0].strDrink);
-        universalDrink = response.drinks[0].strDrink;
         console.log(response.drinks[0][("strIngredient1")]);
 
         function getIngredients() {
@@ -52,9 +51,11 @@ $(document).ready(function () {
             //end verify function
         });
 
-        // function loadVideo() {
-        //     $("#ytplayer").attr("src", "https://www.youtube.com/embed?listType=search&list=" + universalDrink); 
-        // }
+        $("#drinkChoice").click(function() {
+            userDrink = $("#drink-name").text();
+            localStorage.setItem("userDrink",JSON.stringify(userDrink));
+            window.location.href="videoPage.html"
+        })
 
     //end document ready function
 });
