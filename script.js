@@ -72,7 +72,6 @@ $(document).ready(function () {
     $.ajax({
         url: queryURL,
         method: "GET",
-        async: false
     }).then(function (response) {
         console.log(response);
 
