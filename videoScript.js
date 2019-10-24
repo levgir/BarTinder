@@ -12,5 +12,9 @@ $(document).ready(function() {
 
 });
 
+$("#goBackForMore").click(function () {
+    window.location.href = "main.html"
+})
+
 
 

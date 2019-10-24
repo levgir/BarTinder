@@ -3,7 +3,7 @@ var userDrink = '';
 $(document).ready(function () {
 
     var queryURL2 = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-
+function fetchDrink () {
     $.ajax({
         url: queryURL2,
         method: "GET"
@@ -39,6 +39,9 @@ $(document).ready(function () {
 
         //end AJAX call
     });
+};
+
+fetchDrink();
 
 
     //verifying age function
@@ -65,6 +68,10 @@ $(document).ready(function () {
         window.location.href = "videoPage.html"
     })
 
+    $("#dislikeDrink").click(function () {
+        fetchDrink();
+    })
+
 
     //ajax call for joke of the day
     var queryURL = "https://official-joke-api.appspot.com/random_joke";
@@ -79,13 +86,6 @@ $(document).ready(function () {
         $("#punch").append(response.punchline);
 
     });
-
-
-
-
-
-
-
 
 
 
