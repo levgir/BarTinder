@@ -3,46 +3,42 @@ var userDrink = '';
 $(document).ready(function () {
 
     var queryURL2 = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-function fetchDrink () {
-    $.ajax({
-        url: queryURL2,
-        method: "GET"
-    }).then(function (response) {
-        //console.log(response);
+    function fetchDrink () {
+        $("#ing-list").empty();
+        $.ajax({
+            url: queryURL2,
+            method: "GET"
+        }).then(function (response) {
 
-        $("#img").attr("src", response.drinks[0].strDrinkThumb);
-        $("#drink-name").text(response.drinks[0].strDrink);
-     
+            $("#img").attr("src", response.drinks[0].strDrinkThumb);
+            $("#drink-name").text(response.drinks[0].strDrink);
+        
 
-        function getIngredients() {
-            for (var i = 1; i < 15; i++) {
-               
-                if (response.drinks[0][("strIngredient" + i)] !== null) {
-                    var ingredient = response.drinks[0][("strIngredient" + i)];
+            function getIngredients() {
+                for (var i = 1; i < 15; i++) {
+                
+                    if (response.drinks[0][("strIngredient" + i)] !== null) {
+                        var ingredient = response.drinks[0][("strIngredient" + i)];
 
-               
-                    if(response.drinks[0]["strMeasure" + i] !== null) {
-                        var measure = response.drinks[0]["strMeasure" + i];
-                    }else{
-                        var measure = "";
+                
+                        if(response.drinks[0]["strMeasure" + i] !== null) {
+                            var measure = response.drinks[0]["strMeasure" + i];
+                        }else{
+                            var measure = "";
+                        }
+
+                        $('#ing-list').append('<li class="ingredient">' + measure + " " + ingredient + '</li>');
+
                     }
-                    
-                    console.log(ingredient);
-
-
-                    $('#ing-list').append('<li class="ingredient">' + measure + " " + ingredient + '</li>');
-
                 }
             }
-        }
-        getIngredients();
+            getIngredients();
 
-        //end AJAX call
-    });
-};
+            //end AJAX call
+        });
+    };
 
-fetchDrink();
-
+    fetchDrink();
 
     //verifying age function
     $("#ageSubmit").click(function () {
