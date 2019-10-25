@@ -235,9 +235,9 @@ background-image: url(./assets/bar5.jpg);
     height:80%; 
     /* //change to 100% if going full width */
     width:80%;
-    position:absolute;
-    
+    position:absolute; 
 }
+
 
 /* buffer border to keep unexpected results from ingrediant list from stepping on the footer */
 .b-bottom{
@@ -247,11 +247,20 @@ background-image: url(./assets/bar5.jpg);
 
 .video-main{
 object-fit: fill;
-
 }
 
 .button{
     margin-top: 5px;
+    text-align: center;
+}
+
+#goBackForMore{
+text-align: center;
+
+}
+
+#vidBtn .is-centered {
+    align-content: center;
 }
 
 /* Footer stuff */
