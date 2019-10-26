@@ -1,3 +1,7 @@
+html{
+    background-color: black;
+}
+
 body{
     background-image: url(./assets/bar5.jpg);
 }
@@ -47,7 +51,7 @@ h3 {
     width: 80%;
     padding: 20px;
     text-align: center;
-    
+    margin-top: 5px;
 }
 
 /* top navbar */
@@ -55,8 +59,19 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     font-weight: 400;
-    color: white;
     text-align: center;
+}
+
+.hero.is-info .navbar-link{
+    color: white;
+}
+
+.level{
+    text-align: center;
+}
+
+.navbar-menu{
+    background-color: black;
 }
 
 /* Heading text */
@@ -235,9 +250,9 @@ background-image: url(./assets/bar5.jpg);
     height:80%; 
     /* //change to 100% if going full width */
     width:80%;
-    position:absolute;
-    
+    position:absolute; 
 }
+
 
 /* buffer border to keep unexpected results from ingrediant list from stepping on the footer */
 .b-bottom{
@@ -247,16 +262,25 @@ background-image: url(./assets/bar5.jpg);
 
 .video-main{
 object-fit: fill;
-
 }
 
 .button{
     margin-top: 5px;
+    text-align: center;
+}
+
+#goBackForMore{
+text-align: center;
+
+}
+
+#vidBtn .is-centered {
+    align-content: center;
 }
 
 /* Footer stuff */
 .footer{
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 0%;
     position: fixed;
     bottom: 0;
