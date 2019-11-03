@@ -15,4 +15,5 @@ Future Developments:
 *More refined interface with the YouTube API
 *More advanced age verification
 *Incorporating google maps to direct user to nearest bar and /or use the Yelp API to for rating local bars and find locations
-  
+
+See it in operation at https://levgir.github.io/BarTinder/
